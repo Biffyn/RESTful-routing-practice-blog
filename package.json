@@ -1,0 +1,25 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "A simple blog made so I could practice RESTful Routing and Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Biffyn/RESTful-routing-practice-blog.git"
+  },
+  "author": "James Richards",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Biffyn/RESTful-routing-practice-blog/issues"
+  },
+  "homepage": "https://github.com/Biffyn/RESTful-routing-practice-blog#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.0"
+  }
+}
