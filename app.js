@@ -3,7 +3,7 @@ var express     = require("express"),
     bodyParser  = require("body-parser"),
     mongoose    = require("mongoose");
     
-// ***App Config**
+// ***App Config***
 
 app.set("view engine", "ejs");    
 app.use(bodyParser.urlencoded({extended: true}));
@@ -39,6 +39,27 @@ app.get("/blogs", function(req, res){
         }
     });
 });
+
+// NEW - show form to create new post
+app.get("/blogs/new", function(req, res) {
+    res.render("new");
+});
+
+// CREATE - 
+
+app.post("/blogs", function(req, res){
+   // create blog
+   Blog.create(req.body.blog, function(err, newBlog){
+       if (err) {
+           console.log(err);
+           res.render("new");
+       } else {
+           // redirect
+           res.redirect("/blogs");
+       }
+   });
+});
+
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("The Blog Server Is Running");
