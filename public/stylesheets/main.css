@@ -5,3 +5,8 @@ body {
 #delete {
     display: inline;
 }
+
+
+.italic {
+    font-style: italic;
+}
