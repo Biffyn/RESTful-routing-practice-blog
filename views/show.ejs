@@ -11,6 +11,10 @@
             <div class="description">
                 <p><%- blog.body %></p> 
             </div>
+            <a href="/blogs<%= blog._id %>/edit" Class="ui orange inverted button">Edit</a>
+            <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                <button Class="ui red inverted button">Delete</button> 
+            </form>
         </div>
         
     </div>
